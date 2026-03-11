@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Competitor Analysis Tools for B2B SaaS Teams | Tradie Radar</title>
-    <meta name="description" content="Track competitor pricing, product updates & win more deals with automated competitor analysis tools designed for small teams.">
+    <title>Tradie Radar | Never Miss a Golden Goose Job Again</title>
+    <meta name="description" content="When you can't pick up, Tradie Radar answers your phone live within 2 rings. We find the golden goose jobs and text you instantly. Everything else gets handled politely.">
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
@@ -1724,11 +1724,11 @@
                 <span>Tradie Radar</span>
             </a>
             <ul class="nav-menu" id="navMenu">
-                <li><a href="#features">Features</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
                 <li><a href="#pricing">Pricing</a></li>
                 <li><a href="#calculator">ROI Calculator</a></li>
                 <li><a href="#faq">FAQ</a></li>
-                <li><a href="javascript:void(0)" class="cta-button" style="cursor: default; opacity: 0.7;">Start Free Trial</a></li>
+                <li><a href="sms:+447700000000?body=AUDIT" class="cta-button">Text AUDIT — Free</a></li>
             </ul>
             <div class="hamburger" id="hamburger">
                 <span></span>
@@ -1749,59 +1749,80 @@
         
         <div class="container">
             <header class="hero-container">
-                <div class="hero-badge">INTELLIGENCE THAT PAYS</div>
+                <div class="hero-badge">📞 ANSWERS LIVE. EVERY TIME.</div>
                 <div class="hero-content">
-                    <h1>You're <span class="hero-highlight">losing 18-27%</span> of your SaaS deals to competitors</h1>
-                    <p class="supporting-text">What if you could win half the deals you're losing?<br><span style="display: block; margin-top: 0.5em;"></span>For scaling B2B SaaS companies, that represents <strong><span class="hero-highlight">$2-10M in annual revenue</span></strong> sitting right there, waiting to be captured.</p>
+                    <h1>Somewhere in your missed calls is...<br>
+                    <span class="hero-highlight" id="rotatingLine">...a facilities manager with 40 units</span></h1>
+                    <p class="supporting-text">When you can't pick up, Tradie Radar answers live within 2 rings — as your business. We find the golden goose and text you instantly. Everything else gets handled politely.</p>
                     <div class="hero-buttons">
-                        <a href="javascript:void(0)" class="cta-button" role="button" style="cursor: default; opacity: 0.7;">Start for Free</a>
-                        <a href="#calculator" class="cta-button secondary-cta" role="button">Calculate ROI</a>
+                        <a href="sms:+447700000000?body=AUDIT" class="cta-button" role="button">Text AUDIT — It's Free</a>
+                        <a href="#calculator" class="cta-button secondary-cta" role="button">Calculate Your ROI</a>
                     </div>
                 </div>
             </header>
         </div>
     </section>
 
+    <style>
+        #rotatingLine {
+            display: inline-block;
+            transition: opacity 0.45s ease, transform 0.45s ease;
+        }
+        #rotatingLine.exit {
+            opacity: 0;
+            transform: translateY(-14px);
+        }
+        #rotatingLine.enter {
+            opacity: 0;
+            transform: translateY(14px);
+        }
+    </style>
+
+    <script>
+        const rotatingPhrases = [
+            '...a facilities manager with 40 units',
+            '...a job worth more than a month\'s work',
+            '...a landlord who needed someone reliable for years',
+            '...someone who\'d have recommended you to everyone they know',
+            '...the one you\'ll never know you missed'
+        ];
+        let rotatingIndex = 0;
+        const rotatingEl = document.getElementById('rotatingLine');
+        setInterval(() => {
+            rotatingEl.classList.add('exit');
+            setTimeout(() => {
+                rotatingIndex = (rotatingIndex + 1) % rotatingPhrases.length;
+                rotatingEl.textContent = rotatingPhrases[rotatingIndex];
+                rotatingEl.classList.remove('exit');
+                rotatingEl.classList.add('enter');
+                requestAnimationFrame(() => {
+                    requestAnimationFrame(() => {
+                        rotatingEl.classList.remove('enter');
+                    });
+                });
+            }, 450);
+        }, 3200);
+    </script>
+
     <!-- Problem Agitation -->
-    <section class="problem-section" aria-label="Common competitive intelligence problems" itemscope itemtype="https://schema.org/ItemList">
+    <section class="problem-section" aria-label="The cost of missed calls">
         <div class="container">
-            <h2 style="text-align: center; font-size: 32px; font-weight: 700; margin-bottom: 40px;">Right now, while you're reading this:</h2>
-            <div class="problem-cards">
+            <h2 style="text-align: center; font-size: 32px; font-weight: 700; margin-bottom: 20px;">Right now, while you're reading this:</h2>
+            <p style="text-align: center; font-size: 16px; opacity: 0.65; margin-bottom: 48px;">
+                60% of tradespeople can't answer while on the job &nbsp;·&nbsp; 34% lose work from missed calls &nbsp;·&nbsp; 47% of inbound calls go unanswered
+            </p>
+            <div class="problem-cards" style="grid-template-columns: repeat(3, 1fr);">
                 <article class="problem-card">
-                    <div class="problem-icon">
-                        <img src="assets/images/icons/dark-green-no-background-svg/Shrugging.svg" alt="Sales team walking into deals blind" width="100" height="100" class="problem-svg">
-                    </div>
-                    <h3>Your sales team is walking into deals blind</h3>
+                    <div class="problem-icon" style="font-size: 36px; background: transparent;">📵</div>
+                    <h3>A commercial callout just rang out because both your hands were under a sink</h3>
                 </article>
                 <article class="problem-card">
-                    <div class="problem-icon">
-                        <img src="assets/images/icons/dark-green-no-background-svg/Money Bag.svg" alt="Losing winnable deals" width="100" height="100" class="problem-svg">
-                    </div>
-                    <h3>You're losing 2-3 winnable deals every month</h3>
+                    <div class="problem-icon" style="font-size: 36px; background: transparent;">🪜</div>
+                    <h3>You're calling back tyre-kickers at the end of a long day — instead of the one caller who mattered</h3>
                 </article>
                 <article class="problem-card">
-                    <div class="problem-icon">
-                        <img src="assets/images/icons/dark-green-no-background-svg/Down Trend.svg" alt="Competitors changed pricing" width="100" height="100" class="problem-svg">
-                    </div>
-                    <h3>Your competitors just changed their pricing (and you don't know)</h3>
-                </article>
-                <article class="problem-card">
-                    <div class="problem-icon">
-                        <img src="assets/images/icons/dark-green-no-background-svg/Clock.svg" alt="Time spent tracking competitors" width="100" height="100" class="problem-svg">
-                    </div>
-                    <h3>You're spending 15+ hours/week manually tracking competitors</h3>
-                </article>
-                <article class="problem-card">
-                    <div class="problem-icon">
-                        <img src="assets/images/icons/dark-green-no-background-svg/Cash.svg" alt="Enterprise intelligence costs" width="100" height="100" class="problem-svg">
-                    </div>
-                    <h3>Enterprise competitive intelligence costs $30-40k/year</h3>
-                </article>
-                <article class="problem-card">
-                    <div class="problem-icon">
-                        <img src="assets/images/icons/dark-green-no-background-svg/Battle.svg" alt="Outdated battlecards" width="100" height="100" class="problem-svg">
-                    </div>
-                    <h3>Your battlecards are out of date</h3>
+                    <div class="problem-icon" style="font-size: 36px; background: transparent;">💸</div>
+                    <h3>67% of trades turn down at least one job a month. Most don't know which ones.</h3>
                 </article>
             </div>
         </div>
@@ -1812,7 +1833,27 @@
         <div class="container">
             <div class="built-different-content">
                 <h2>The Brutal Truth</h2>
-                <p class="built-different-description"><span class="animated-underline">Scaling B2B SaaS companies <span class="hero-highlight">leave millions of dollars on the table</span> because they aren't keeping up with competitive intelligence.</span></p>
+                <p class="built-different-description">The problem isn't missing calls. It's not knowing which ones mattered. One call could be someone wanting a washer changed. The next could be a facilities manager with a 3-year contract. Right now, you're treating both the same — by missing them both.</p>
+                <blockquote class="built-different-quote" style="font-size: 22px; font-weight: 600; color: var(--primary-action); font-style: italic; padding: 32px; background: var(--gray-light); border-radius: 16px; border-left: 4px solid var(--primary-action); margin-top: 32px;">"Not every job deserves your time. But you won't know which ones do until someone's already answered them."</blockquote>
+            </div>
+        </div>
+    </section>
+
+    <!-- Two Problems Section -->
+    <section class="built-different-section" id="how-it-works" style="background: var(--gray-light);">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 32px; font-weight: 700; margin-bottom: 48px;">Two problems. One solution.</h2>
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; max-width: 900px; margin: 0 auto;">
+                <article style="background: white; padding: 40px; border-radius: 16px; border: 1px solid #e5e7eb;">
+                    <div style="font-size: 48px; margin-bottom: 24px;">🦢</div>
+                    <h3 style="font-size: 24px; font-weight: 700; margin-bottom: 16px; color: var(--text-primary);">Never miss the big one</h3>
+                    <p style="font-size: 16px; line-height: 1.6; color: var(--text-secondary);">One missed call could be worth a month's work. Or more. Tradie Radar answers live within 2 rings — as your business. No robotic voicemail. No awkward "call back later" moments. Just a real person, representing you, capturing the details before the caller rings the next tradesperson on Google.</p>
+                </article>
+                <article style="background: white; padding: 40px; border-radius: 16px; border: 1px solid #e5e7eb;">
+                    <div style="font-size: 48px; margin-bottom: 24px;">🎯</div>
+                    <h3 style="font-size: 24px; font-weight: 700; margin-bottom: 16px; color: var(--text-primary);">Only hear about what matters</h3>
+                    <p style="font-size: 16px; line-height: 1.6; color: var(--text-secondary);">Not every call is worth your attention right now. Tradie Radar learns what a "golden goose" looks like for your business — multi-property landlords, facilities managers, commercial jobs, emergency callouts. Those get texted to you instantly. Everything else? Handled politely. Booked in. Followed up. But not interrupting you mid-job.</p>
+                </article>
             </div>
         </div>
     </section>
@@ -1821,78 +1862,119 @@
     <section class="calculator-section" id="calculator">
         <div class="calculator-container">
             <div class="section-header">
-                <h2 style="text-align: center; font-size: 32px; font-weight: 700; margin-bottom: 40px;">What is poor competitive intelligence costing you?</h2>
+                <h2 style="text-align: center; font-size: 32px; font-weight: 700; margin-bottom: 40px;">What Are Missed Calls Costing You?</h2>
             </div>
             <div class="calculator-box">
                 <div class="input-group">
-                    <label for="annual-revenue">Annual Revenue</label>
-                    <input type="text" id="annual-revenue" class="revenue-input" placeholder="$5,000,000">
+                    <label for="missed-calls">Missed calls per week <span id="missed-calls-value" style="font-weight: 700; color: var(--primary-action);">25</span></label>
+                    <input type="range" id="missed-calls" min="5" max="60" value="25" step="1" style="width: 100%; height: 8px; background: linear-gradient(to right, var(--primary-action) 0%, var(--primary-action) 33%, #e5e7eb 33%, #e5e7eb 100%); border-radius: 4px; outline: none; -webkit-appearance: none; appearance: none;">
                 </div>
-                <button class="cta-button calculate-btn" onclick="calculateROI()">Calculate My Lost Revenue</button>
-                <div class="results" id="results">
+                <div class="input-group">
+                    <label for="job-value">Average job value <span id="job-value-display" style="font-weight: 700; color: var(--primary-action);">£1,200</span></label>
+                    <input type="range" id="job-value" min="200" max="5000" value="1200" step="100" style="width: 100%; height: 8px; background: linear-gradient(to right, var(--primary-action) 0%, var(--primary-action) 20%, #e5e7eb 20%, #e5e7eb 100%); border-radius: 4px; outline: none; -webkit-appearance: none; appearance: none;">
+                </div>
+                <div class="input-group">
+                    <label for="conversion-rate">% who'd have booked <span id="conversion-rate-value" style="font-weight: 700; color: var(--primary-action);">20%</span></label>
+                    <input type="range" id="conversion-rate" min="5" max="50" value="20" step="1" style="width: 100%; height: 8px; background: linear-gradient(to right, var(--primary-action) 0%, var(--primary-action) 33%, #e5e7eb 33%, #e5e7eb 100%); border-radius: 4px; outline: none; -webkit-appearance: none; appearance: none;">
+                </div>
+                <div class="results" id="results" style="margin-top: 40px; text-align: center;">
                     <div class="loss-table-container">
-                        <h3 class="loss-title">Your Competitive Losses</h3>
-                        <table class="loss-table">
-                            <thead>
-                                <tr>
-                                    <th></th>
-                                    <th class="conservative-header">Conservative (18%)</th>
-                                    <th class="aggressive-header">Aggressive (27%)</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="row-label">Annual Loss</td>
-                                    <td class="loss-value" id="annual-loss-min">$0</td>
-                                    <td class="loss-value" id="annual-loss-max">$0</td>
-                                </tr>
-                                <tr>
-                                    <td class="row-label">Monthly Loss</td>
-                                    <td class="loss-value" id="monthly-loss-min">$0</td>
-                                    <td class="loss-value" id="monthly-loss-max">$0</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <p class="loss-explanation">Revenue that could have been yours.</p>
+                        <h3 class="loss-title" style="font-size: 18px; font-weight: 600; color: var(--text-secondary); margin-bottom: 16px;">You're losing roughly:</h3>
+                        <div style="font-size: 56px; font-weight: 700; color: var(--primary-action); margin-bottom: 8px;">
+                            £<span id="monthly-loss">25,800</span>
+                        </div>
+                        <p style="font-size: 16px; color: var(--text-secondary); margin-bottom: 24px;">per month in missed opportunities</p>
+                        <p class="loss-explanation" style="font-size: 14px; color: var(--text-secondary); opacity: 0.7;">Based on <span id="booked-jobs">22</span> jobs/month you could have booked</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <script>
+        // ROI Calculator with sliders
+        const missedCallsInput = document.getElementById('missed-calls');
+        const jobValueInput = document.getElementById('job-value');
+        const conversionRateInput = document.getElementById('conversion-rate');
+
+        const missedCallsDisplay = document.getElementById('missed-calls-value');
+        const jobValueDisplay = document.getElementById('job-value-display');
+        const conversionRateDisplay = document.getElementById('conversion-rate-value');
+
+        const monthlyLossDisplay = document.getElementById('monthly-loss');
+        const bookedJobsDisplay = document.getElementById('booked-jobs');
+
+        function updateROI() {
+            const missedCalls = parseInt(missedCallsInput.value);
+            const jobValue = parseInt(jobValueInput.value);
+            const conversionRate = parseInt(conversionRateInput.value);
+
+            // Update displayed values
+            missedCallsDisplay.textContent = missedCalls;
+            jobValueDisplay.textContent = '£' + jobValue.toLocaleString();
+            conversionRateDisplay.textContent = conversionRate + '%';
+
+            // Calculate monthly loss: calls per week × 4.3 weeks × conversion rate × job value
+            const monthlyMissedCalls = missedCalls * 4.3;
+            const bookedJobs = Math.round(monthlyMissedCalls * (conversionRate / 100));
+            const monthlyLoss = Math.round(bookedJobs * jobValue);
+
+            // Update results
+            monthlyLossDisplay.textContent = monthlyLoss.toLocaleString();
+            bookedJobsDisplay.textContent = bookedJobs;
+
+            // Update slider backgrounds to show progress
+            const missedCallsPercent = ((missedCalls - 5) / (60 - 5)) * 100;
+            const jobValuePercent = ((jobValue - 200) / (5000 - 200)) * 100;
+            const conversionPercent = ((conversionRate - 5) / (50 - 5)) * 100;
+
+            missedCallsInput.style.background = `linear-gradient(to right, var(--primary-action) 0%, var(--primary-action) ${missedCallsPercent}%, #e5e7eb ${missedCallsPercent}%, #e5e7eb 100%)`;
+            jobValueInput.style.background = `linear-gradient(to right, var(--primary-action) 0%, var(--primary-action) ${jobValuePercent}%, #e5e7eb ${jobValuePercent}%, #e5e7eb 100%)`;
+            conversionRateInput.style.background = `linear-gradient(to right, var(--primary-action) 0%, var(--primary-action) ${conversionPercent}%, #e5e7eb ${conversionPercent}%, #e5e7eb 100%)`;
+        }
+
+        // Add event listeners
+        missedCallsInput.addEventListener('input', updateROI);
+        jobValueInput.addEventListener('input', updateROI);
+        conversionRateInput.addEventListener('input', updateROI);
+
+        // Initialize on page load
+        updateROI();
+    </script>
+
     <!-- Features Section -->
-    <section class="features-section" id="features" aria-label="Product features">
+    <section class="features-section" id="features" aria-label="How Tradie Radar Works">
         <div class="container">
             <header class="section-header">
-                <h2>Competitor Analysis Tools Designed For How Small Teams Actually Work</h2>
+                <h2>How Tradie Radar Works</h2>
             </header>
             <div class="bento-grid">
                 <div class="feature-card large">
                     <div>
-                        <h3><span class="animated-underline">Every feature must directly impact revenue within 30 days or it doesn't exist</span></h3>
-                        <p>Stop paying for features you'll never use. We build only what drives deals.</p>
+                        <h3><span class="animated-underline">Every call answered live within 2 rings</span></h3>
+                        <p>No robotic menus. No voicemail. Just a real person who knows your business, capturing details before the caller moves on.</p>
                     </div>
                     <div class="feature-visual"></div>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">🎯</div>
-                    <h3>Automated Monitoring</h3>
-                    <p>Set it once, never miss a competitive move again</p>
+                    <div class="feature-icon">📞</div>
+                    <h3>Your phone forwards after 2 rings</h3>
+                    <p>Conditional call forwarding — only when you don't pick up</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">📅</div>
-                    <h3>Weekly Digest, Not Daily Noise</h3>
-                    <p>Get what matters, when it matters</p>
+                    <div class="feature-icon">🎭</div>
+                    <h3>We answer live, as your business</h3>
+                    <p>Trained to sound like your team, not a call centre</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">⚡</div>
-                    <h3>Instant Battlecards</h3>
-                    <p>Win arguments in real-time</p>
+                    <div class="feature-icon">🦢</div>
+                    <h3>Golden goose? Instant text.</h3>
+                    <p>High-value jobs texted to you immediately with full details</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">💰</div>
-                    <h3>Price Change Alerts</h3>
-                    <p>Strike when competitors are vulnerable</p>
+                    <div class="feature-icon">✅</div>
+                    <h3>Everything else? Handled politely.</h3>
+                    <p>Booked in, followed up, no interruptions to your day</p>
                 </div>
             </div>
         </div>
@@ -1907,21 +1989,21 @@
                 <h2>Simple Pricing That Makes Sense</h2>
             </div>
             <div class="pricing-card">
-                <div class="beta-badge">Limited Beta - <span id="spotsLeft">13</span> spots left</div>
+                <div class="beta-badge">Limited Beta — South London Only</div>
                 <div class="price-display">
-                    <div class="old-price">$1,500/month</div>
-                    <div class="current-price">$750/month</div>
+                    <div class="current-price">£99/month</div>
                 </div>
                 <ul class="features-list">
-                    <li><span class="check-icon">✓</span> Monitor 5 competitors</li>
-                    <li><span class="check-icon">✓</span> Weekly intelligence digests</li>
-                    <li><span class="check-icon">✓</span> Automated battlecards</li>
-                    <li><span class="check-icon">✓</span> Unlimited team members</li>
-                    <li><span class="check-icon">✓</span> 30-minute setup</li>
-                    <li><span class="check-icon">✓</span> Free onboarding ($5K value)</li>
+                    <li><span class="check-icon">✓</span> Every call answered live within 2 rings</li>
+                    <li><span class="check-icon">✓</span> Answered as your business, not a call centre</li>
+                    <li><span class="check-icon">✓</span> Golden goose jobs texted instantly</li>
+                    <li><span class="check-icon">✓</span> Everything else handled politely</li>
+                    <li><span class="check-icon">✓</span> No contracts — cancel anytime</li>
+                    <li><span class="check-icon">✓</span> Free missed call audit to start</li>
+                    <li><span class="check-icon">✓</span> Setup in under 5 minutes</li>
                 </ul>
-                <button class="cta-button" style="width: 100%; font-size: 20px; padding: 20px; cursor: default; opacity: 0.7;" disabled>Claim Beta Access</button>
-                <div class="guarantee">30-day money back - See revenue impact or pay nothing</div>
+                <a href="sms:+447700000000?body=AUDIT" class="cta-button" style="width: 100%; font-size: 20px; padding: 20px; display: block; text-align: center; text-decoration: none;">Text AUDIT to Get Started Free</a>
+                <div class="guarantee">30-day money-back guarantee — if we don't help you recover a job worth £500+, you pay nothing</div>
             </div>
         </div>
     </section>
@@ -1929,12 +2011,12 @@
     <!-- Philosophy -->
     <section class="philosophy-section">
         <div class="philosophy-content">
-            <h2>Built Different Because You Are Different</h2>
+            <h2>Built for Trades. Not Call Centres.</h2>
             <p class="philosophy-text">
-                Enterprise tools give you 200,000 data sources. You need 5. They give you 100-page reports. You need 2 pages. They take months to show value. You need value this month.
+                We're not a call centre pretending to understand trades. We're built for plumbers, electricians, roofers, HVAC engineers — people who can't drop everything to answer the phone, but can't afford to miss the call that matters.
             </p>
             <div class="pullquote" id="pullquote">
-                "Every feature must directly impact revenue within 30 days or it doesn't exist."
+                "Every feature must directly impact your day — or it doesn't exist."
             </div>
         </div>
     </section>
@@ -1942,10 +2024,10 @@
     <!-- Bottom CTA -->
     <section class="bottom-cta">
         <div class="container">
-            <h2>Start Winning More Deals Within 30 Days</h2>
-            <p class="subheadline">Your competitor is probably already a beta customer.</p>
-            <button class="cta-button" style="cursor: default; opacity: 0.7;" disabled>Start 30-Day Trial</button>
-            <p class="supporting-text">No contract. Cancel anytime. Revenue impact guaranteed.</p>
+            <h2>Sleep guilt-free. You'll never miss THE BIG ONE.</h2>
+            <p class="subheadline">67% of trades turn down jobs monthly. Most don't know which ones. You will.</p>
+            <a href="sms:+447700000000?body=AUDIT" class="cta-button" style="display: inline-block; text-decoration: none;">Text AUDIT — Free Missed Call Audit</a>
+            <p class="supporting-text">No risk. No contract. Just one text to see what you've been missing. South London only.</p>
         </div>
     </section>
 
@@ -1953,148 +2035,69 @@
     <section class="faq-section" id="faq" aria-label="Frequently Asked Questions">
         <div class="container">
             <div class="section-header">
-                <h2>Frequently Asked Questions About Competitor Analysis Tools</h2>
-                <p class="subheadline">Everything you need to know about competitive intelligence for B2B SaaS</p>
+                <h2>Frequently Asked Questions</h2>
+                <p class="subheadline">Everything you need to know about Tradie Radar</p>
             </div>
             <div class="faq-container">
                 <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                    <h3 class="faq-question" itemprop="name">What are the best competitor analysis tools for B2B SaaS companies?</h3>
+                    <h3 class="faq-question" itemprop="name">Will the caller know they're not speaking to me?</h3>
                     <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                         <div itemprop="text">
-                            <p>The best competitor analysis tools for B2B SaaS companies are those designed specifically for small sales teams, not enterprise departments. Traditional solutions like Klue and Crayon cost $30,000+ annually and require dedicated personnel to manage, making them unsuitable for companies with $5M-$30M ARR.</p>
-                            <p>Tradie Radar is built specifically for scaling B2B SaaS teams who need:</p>
-                            <ul>
-                                <li><strong>Automated competitor monitoring</strong> for 3-5 direct competitors (not 200+ sources)</li>
-                                <li><strong>Weekly intelligence digests</strong> instead of daily noise</li>
-                                <li><strong>Quick-win live battlecards</strong> that sales reps actually use during calls</li>
-                                <li><strong>Pricing intelligence</strong> that alerts you to competitor price changes affecting active deals</li>
-                                <li><strong>Instant alerts</strong> when competitors make significant moves (optional)</li>
-                            </ul>
-                            <p>Unlike enterprise competitor analysis software, Tradie Radar will deliver actionable insights within 48 hours of setup—not months of onboarding.</p>
-                            <p><strong>Ready to stop losing winnable deals to competitors?</strong> Start your free 30-day trial and see why growing SaaS teams choose Tradie Radar over expensive enterprise alternatives.</p>
+                            <p>Not unless you want them to. Our team is trained to answer as your business. We learn your business name, service area, typical jobs, and pricing structure. To the caller, it sounds like they've reached your office — not a generic answering service.</p>
+                            <p>We're not reading from a script. We're having a real conversation to understand what they need, when they need it, and whether it's the kind of job you want to hear about immediately.</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                    <h3 class="faq-question" itemprop="name">How much do competitor analysis tools typically cost?</h3>
+                    <h3 class="faq-question" itemprop="name">How does the call forwarding work?</h3>
                     <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                         <div itemprop="text">
-                            <p>Competitor analysis tools range dramatically in price, creating a massive gap in the market:</p>
-                            <p><strong>Enterprise Solutions:</strong> $30,000-$40,000+ annually</p>
-                            <ul>
-                                <li>Klue: $30K-40K+ (requires custom pricing)</li>
-                                <li>Crayon: $30K-40K+ (enterprise-only)</li>
-                                <li>Kompyte: $10K+ minimum with user restrictions</li>
-                            </ul>
-                            <p><strong>The Problem:</strong> These enterprise prices force 80% of B2B SaaS companies to rely on manual spreadsheets and Google Alerts, costing them 10-15 hours weekly in manual work and millions of dollars in lost competitive deals annually.</p>
-                            <p><strong>Tradie Radar's Approach:</strong> $1,000-$1,500/month</p>
-                            <ul>
-                                <li>Designed for B2B SaaS companies with $5M-$30M ARR</li>
-                                <li>No per-seat pricing (entire sales team included)</li>
-                                <li>30-minute setup vs. months of enterprise onboarding</li>
-                                <li>Focus on 3-5 competitors, not overwhelming market analysis</li>
-                            </ul>
-                            <p><strong>The math is simple:</strong> Save $25K+ annually vs. enterprise solutions while actually getting intelligence your team will use. Most customers see ROI within 30 days through improved win rates.</p>
+                            <p>It's called "conditional call forwarding" — your phone forwards to us only if you don't pick up within 2 rings. If you answer, we never see the call. If you're busy, it forwards to us automatically.</p>
+                            <p>Setup takes 2 minutes. You dial a code (we'll send it to you), enter our number, done. You can turn it on and off whenever you like. No app. No new number. No changing your business cards.</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                    <h3 class="faq-question" itemprop="name">How do you track competitor pricing changes effectively?</h3>
+                    <h3 class="faq-question" itemprop="name">What counts as a "golden goose" job?</h3>
                     <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                         <div itemprop="text">
-                            <p>Most B2B SaaS companies track competitor pricing manually, checking competitor websites weekly and updating spreadsheets. This approach misses 60% of pricing changes and consumes 3-5 hours weekly per competitor.</p>
-                            <p><strong>Here's how to track competitor pricing effectively:</strong></p>
-                            <p><strong>1. Automated Daily Monitoring</strong></p>
+                            <p>We work with you to define it, but typically it's one of these:</p>
                             <ul>
-                                <li>Use tools like Tradie Radar to automatically screenshot competitor pricing pages</li>
-                                <li>Set up alerts for pricing model changes (not just price changes)</li>
-                                <li>Track promotional offers and limited-time discounts</li>
+                                <li><strong>Commercial work</strong> — facilities managers, property management companies, businesses</li>
+                                <li><strong>Multi-property landlords</strong> — someone who owns 5+ rental units and needs a reliable tradesperson</li>
+                                <li><strong>Emergency callouts</strong> — "I need someone now" jobs that pay premium rates</li>
+                                <li><strong>High-value projects</strong> — jobs worth £1,000+ that you'd want to know about immediately</li>
                             </ul>
-                            <p><strong>2. Focus on Deal-Impact Changes</strong></p>
-                            <ul>
-                                <li>Monitor pricing tiers that affect your active deals</li>
-                                <li>Track feature bundling changes that impact positioning</li>
-                                <li>Alert sales reps when competitor pricing affects specific opportunities</li>
-                            </ul>
-                            <p><strong>3. Historical Trend Analysis</strong></p>
-                            <ul>
-                                <li>Maintain pricing history to identify patterns</li>
-                                <li>Track seasonal pricing changes</li>
-                                <li>Document pricing strategy shifts over time</li>
-                            </ul>
-                            <p><strong>4. Competitive Response Playbooks</strong></p>
-                            <ul>
-                                <li>Prepare responses to common pricing moves</li>
-                                <li>Create talking points for sales team</li>
-                                <li>Update battlecards within 24 hours of changes</li>
-                            </ul>
-                            <p><strong>The Reality:</strong> Manual competitor price tracking fails because small teams don't have bandwidth for systematic monitoring. Tradie Radar automates this entire process, delivering pricing intelligence directly to your CRM and weekly digests.</p>
+                            <p>Everything else (small repairs, tire-kickers, price shoppers) gets handled politely, booked in your calendar if appropriate, but doesn't interrupt your workday.</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                    <h3 class="faq-question" itemprop="name">What's the difference between competitor analysis tools and competitive intelligence platforms?</h3>
+                    <h3 class="faq-question" itemprop="name">What happens to calls that aren't golden goose?</h3>
                     <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                         <div itemprop="text">
-                            <p>The terms are often used interchangeably, but there's a crucial difference that affects which solution works for your team:</p>
-                            <p><strong>Competitive Intelligence Platforms (Enterprise):</strong></p>
+                            <p>We handle them politely and professionally. Depending on what you prefer, we can:</p>
                             <ul>
-                                <li>Comprehensive market analysis covering 200+ sources</li>
-                                <li>Dedicated CI teams required to manage complexity</li>
-                                <li>Months of setup and training required</li>
-                                <li>$30K-40K annual budgets</li>
-                                <li>Focus on strategic planning and executive briefings</li>
+                                <li>Book them into your calendar for a callback later</li>
+                                <li>Take full details and send you a text summary at end of day</li>
+                                <li>Give them a rough quote if it's standard work</li>
+                                <li>Politely decline if it's outside your service area or expertise</li>
                             </ul>
-                            <p><strong>Competitor Analysis Tools (Mid-Market):</strong></p>
-                            <ul>
-                                <li>Focused monitoring of 3-5 direct competitors</li>
-                                <li>Designed for existing sales/product teams</li>
-                                <li>30-minute setup</li>
-                                <li>$1K-2K monthly budgets</li>
-                                <li>Focus on immediate sales enablement and deal wins</li>
-                            </ul>
-                            <p><strong>Most B2B SaaS companies need analysis tools, not intelligence platforms.</strong> If you have 30-150 employees and face the same 3-5 competitors repeatedly in deals, you need focused competitor analysis that your sales team can actually use immediately—not comprehensive market intelligence that requires dedicated personnel.</p>
-                            <p><strong>Key Questions to Ask:</strong></p>
-                            <ul>
-                                <li>Do we have a dedicated competitive intelligence team? (If no → analysis tools)</li>
-                                <li>Do we need to track 20+ competitors? (If no → analysis tools)</li>
-                                <li>Do we measure success by win rates vs. specific competitors? (If yes → analysis tools)</li>
-                            </ul>
-                            <p>Tradie Radar bridges this gap by delivering enterprise-quality competitor analysis at a price point and complexity level that works for growing SaaS teams.</p>
+                            <p>The goal is simple: <strong>you only get interrupted for calls that are worth interrupting you for.</strong> Everything else gets handled without pulling you off the tools.</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                    <h3 class="faq-question" itemprop="name">Are there any free competitor analysis tools that actually work?</h3>
+                    <h3 class="faq-question" itemprop="name">What's the free missed call audit?</h3>
                     <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                         <div itemprop="text">
-                            <p>Yes, there are free competitor analysis tools, but they require significant manual work and miss critical real-time changes:</p>
-                            <p><strong>Free Options That Provide Value:</strong></p>
-                            <ul>
-                                <li><strong>Google Alerts:</strong> Basic keyword monitoring (limited effectiveness)</li>
-                                <li><strong>Wayback Machine:</strong> Historical website changes (manual checking required)</li>
-                                <li><strong>Social media monitoring:</strong> LinkedIn/X competitor updates</li>
-                                <li><strong>Manual spreadsheet templates:</strong> Structured competitor comparison</li>
-                            </ul>
-                            <p><strong>Why Free Tools Fall Short for B2B SaaS:</strong></p>
-                            <ul>
-                                <li><strong>No automation:</strong> Still requires 10-15 hours weekly of manual work</li>
-                                <li><strong>Miss critical changes:</strong> 60% of important competitor updates go unnoticed</li>
-                                <li><strong>Poor timing:</strong> Learn about pricing changes weeks after they impact deals</li>
-                                <li><strong>No context:</strong> Raw data without "so what" analysis</li>
-                                <li><strong>Team adoption:</strong> Sales reps won't use complex spreadsheets during calls</li>
-                            </ul>
-                            <p><strong>The Reality Check:</strong> Free tools work for basic research, but growing SaaS companies lose $2-10M annually in winnable deals due to inadequate competitive intelligence.</p>
-                            <p><strong>Tradie Radar's Approach:</strong></p>
-                            <ul>
-                                <li>Start with our free template to structure your thinking</li>
-                                <li>Upgrade to automated monitoring when manual processes can't scale</li>
-                                <li>30-day free trial to prove ROI before any investment</li>
-                            </ul>
+                            <p>Text <strong>AUDIT</strong> to our number, and we'll walk you through a quick exercise:</p>
+                            <p>We'll ask you to estimate how many calls you miss per week, what percentage might be high-value jobs, and your average job value. Then we'll show you roughly what those missed calls could be costing you per month.</p>
+                            <p>Most tradespeople are shocked when they see the number. It's not a sales pitch — it's just math. If it makes sense to fix the problem, we'll talk about how Tradie Radar works. If not, no hard feelings. At least you'll know what you're leaving on the table.</p>
                         </div>
                     </div>
                 </div>
@@ -2107,7 +2110,7 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2024 Tradie Radar. All rights reserved.</p>
+            <p>&copy; 2025 Tradie Radar · South London · I live on Abbeville Road, Clapham</p>
         </div>
     </footer>
 
@@ -2191,124 +2194,6 @@
         // Observe elements
         document.querySelectorAll('.problem-card, .feature-card, .testimonial-card, .pullquote, .animated-underline, .hero-highlight').forEach(el => {
             observer.observe(el);
-        });
-
-        // ROI Calculator
-        function calculateROI() {
-            const annualRevenueInput = document.getElementById('annual-revenue').value.replace(/[$,]/g, '');
-            const annualRevenue = parseInt(annualRevenueInput) || 0;
-            
-            if (annualRevenue === 0) {
-                alert('Please enter your annual revenue');
-                return;
-            }
-            
-            // Calculate competitive losses: Annual Revenue × 18-27%
-            const minLossRate = 0.18; // 18%
-            const maxLossRate = 0.27; // 27%
-            
-            const minAnnualLoss = annualRevenue * minLossRate;
-            const maxAnnualLoss = annualRevenue * maxLossRate;
-            const minMonthlyLoss = minAnnualLoss / 12;
-            const maxMonthlyLoss = maxAnnualLoss / 12;
-            
-            // Update results display
-            document.getElementById('annual-loss-min').textContent = `$${Math.round(minAnnualLoss).toLocaleString()}`;
-            document.getElementById('annual-loss-max').textContent = `$${Math.round(maxAnnualLoss).toLocaleString()}`;
-            document.getElementById('monthly-loss-min').textContent = `$${Math.round(minMonthlyLoss).toLocaleString()}`;
-            document.getElementById('monthly-loss-max').textContent = `$${Math.round(maxMonthlyLoss).toLocaleString()}`;
-            
-            // Animate the results
-            const resultsDiv = document.getElementById('results');
-            resultsDiv.classList.add('show');
-        }
-
-        // Format revenue input with $ and commas
-        function formatRevenue(input) {
-            // Get cursor position
-            const cursorPosition = input.selectionStart;
-            
-            // Remove all non-numeric characters
-            const numericValue = input.value.replace(/[^\d]/g, '');
-            
-            if (numericValue === '') {
-                input.value = '';
-                return;
-            }
-            
-            // Add commas
-            const formattedValue = '$' + parseInt(numericValue).toLocaleString();
-            
-            // Set the formatted value
-            input.value = formattedValue;
-            
-            // Restore cursor position (adjust for added characters)
-            const newCursorPosition = Math.min(cursorPosition + (formattedValue.length - input.value.length + formattedValue.length), formattedValue.length);
-            input.setSelectionRange(newCursorPosition, newCursorPosition);
-        }
-
-        // Add event listener for revenue formatting
-        document.addEventListener('DOMContentLoaded', function() {
-            const revenueInput = document.getElementById('annual-revenue');
-            if (revenueInput) {
-                revenueInput.addEventListener('input', function() {
-                    formatRevenue(this);
-                });
-                
-                revenueInput.addEventListener('keyup', function() {
-                    formatRevenue(this);
-                });
-            }
-        });
-
-        function animateValue(id, start, end, duration, isCurrency, suffix = '') {
-            const element = document.getElementById(id);
-            const range = end - start;
-            const increment = range / (duration / 16);
-            let current = start;
-            
-            const timer = setInterval(() => {
-                current += increment;
-                if (current >= end) {
-                    current = end;
-                    clearInterval(timer);
-                }
-                
-                if (isCurrency) {
-                    element.textContent = '$' + Math.round(current).toLocaleString();
-                } else {
-                    element.textContent = Math.round(current).toLocaleString() + suffix;
-                }
-            }, 16);
-        }
-
-        // Beta spots countdown (fake urgency)
-        let spots = 13;
-        setInterval(() => {
-            if (spots > 3) {
-                spots--;
-                document.getElementById('spotsLeft').textContent = spots;
-            }
-        }, 45000); // Decrease every 45 seconds
-
-        // Add some dynamic effects to the dashboard mockup
-        setInterval(() => {
-            const badges = document.querySelectorAll('.notification-badge');
-            badges.forEach(badge => {
-                badge.style.animation = 'pulse 0.5s ease';
-                setTimeout(() => {
-                    badge.style.animation = '';
-                }, 500);
-            });
-        }, 5000);
-
-        // Format revenue input
-        document.getElementById('annual-revenue').addEventListener('input', function(e) {
-            let value = e.target.value.replace(/[^\d]/g, '');
-            if (value) {
-                value = parseInt(value).toLocaleString();
-                e.target.value = '$' + value;
-            }
         });
 
         // FAQ Accordion functionality
