@@ -1751,8 +1751,7 @@
             <header class="hero-container">
                 <div class="hero-badge">📞 ANSWERS LIVE. EVERY TIME.</div>
                 <div class="hero-content">
-                    <h1>Somewhere in your missed calls is...<br>
-                    <span class="hero-highlight" id="rotatingLine">...a facilities manager with 40 units</span></h1>
+                    <h1>Did you miss a call from<br><span id="rotatingWrapper"><span class="hero-highlight" id="rotatingLine">...a property manager with 40 units</span></span></h1>
                     <p class="supporting-text">When you can't pick up, Tradie Radar answers live within 2 rings — as your business. We find the golden goose and text you instantly. Everything else gets handled politely.</p>
                     <div class="hero-buttons">
                         <a href="sms:+447700000000?body=AUDIT" class="cta-button" role="button">Text AUDIT — It's Free</a>
@@ -1764,23 +1763,27 @@
     </section>
 
     <style>
-        #rotatingLine {
+        #rotatingWrapper {
             display: inline-block;
-            transition: opacity 0.45s ease, transform 0.45s ease;
+            transform: translateY(0);
+            transition: transform 0.45s ease, opacity 0.45s ease;
         }
-        #rotatingLine.exit {
+        #rotatingWrapper.exit {
             opacity: 0;
-            transform: translateY(-14px);
+            transform: translateY(-8px);
         }
-        #rotatingLine.enter {
+        #rotatingWrapper.enter {
             opacity: 0;
-            transform: translateY(14px);
+            transform: translateY(8px);
+        }
+        #rotatingLine {
+            display: inline;
         }
     </style>
 
     <script>
         const rotatingPhrases = [
-            '...a facilities manager with 40 units',
+            '...a property manager with 40 units',
             '...a job worth more than a month\'s work',
             '...a landlord who needed someone reliable for years',
             '...someone who\'d have recommended you to everyone they know',
@@ -1788,16 +1791,17 @@
         ];
         let rotatingIndex = 0;
         const rotatingEl = document.getElementById('rotatingLine');
+        const rotatingWrapper = document.getElementById('rotatingWrapper');
         setInterval(() => {
-            rotatingEl.classList.add('exit');
+            rotatingWrapper.classList.add('exit');
             setTimeout(() => {
                 rotatingIndex = (rotatingIndex + 1) % rotatingPhrases.length;
                 rotatingEl.textContent = rotatingPhrases[rotatingIndex];
-                rotatingEl.classList.remove('exit');
-                rotatingEl.classList.add('enter');
+                rotatingWrapper.classList.remove('exit');
+                rotatingWrapper.classList.add('enter');
                 requestAnimationFrame(() => {
                     requestAnimationFrame(() => {
-                        rotatingEl.classList.remove('enter');
+                        rotatingWrapper.classList.remove('enter');
                     });
                 });
             }, 450);
