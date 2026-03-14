@@ -589,6 +589,22 @@
             box-shadow: 0 15px 50px var(--shadow-medium);
         }
 
+        .two-problems-card {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.3s ease;
+        }
+
+        .two-problems-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .two-problems-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 50px var(--shadow-medium);
+        }
+
         .problem-icon {
             width: 60px;
             height: 60px;
@@ -1749,10 +1765,10 @@
         
         <div class="container">
             <header class="hero-container">
-                <div class="hero-badge">FILL YOUR CALENDAR WITH PROPER JOBS</div>
+                <div class="hero-badge">MORE INCOME, LESS FAFF</div>
                 <div class="hero-content">
-                    <h1>Don't miss...<br><span id="rotatingWrapper"><span class="hero-highlight" id="rotatingLine">...a property manager with 40 units</span></span></h1>
-                    <p class="supporting-text">We answer every call live within 2 rings — as your business.<span style="display: block; height: 0.4em;"></span>Golden geese and high-value jobs get texted to you instantly.<span style="display: block; height: 0.4em;"></span>Everything else gets handled politely. You only get interrupted for the ones worth stopping for.</p>
+                    <h1>Never miss...<br><span id="rotatingWrapper"><span class="hero-highlight" id="rotatingLine">...a property manager with 40 units</span></span></h1>
+                    <p class="supporting-text">We answer every call live within 2 rings — as your business.<span style="display: block; height: 0.4em;"></span><strong>Golden geese and high-value jobs get texted to you instantly.</strong><span style="display: block; height: 0.4em;"></span>Everything else gets handled politely. You only get interrupted by jobs worth stopping for.</p>
                     <div class="hero-buttons">
                         <a href="sms:+447700000000?body=AUDIT" class="cta-button" role="button">Text AUDIT — It's Free</a>
                         <a href="#calculator" class="cta-button secondary-cta" role="button">Calculate Your ROI</a>
@@ -1849,12 +1865,12 @@
         <div class="container">
             <h2 style="text-align: center; font-size: 32px; font-weight: 700; margin-bottom: 48px;">Two problems. One solution.</h2>
             <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; max-width: 900px; margin: 0 auto;">
-                <article style="background: white; padding: 40px; border-radius: 16px; border: 1px solid #e5e7eb;">
+                <article class="two-problems-card" style="background: white; padding: 40px; border-radius: 16px; border: 1px solid #e5e7eb;">
                     <div style="font-size: 48px; margin-bottom: 24px;">🦢</div>
                     <h3 style="font-size: 24px; font-weight: 700; margin-bottom: 16px; color: var(--text-primary);">Never miss the big one</h3>
                     <p style="font-size: 16px; line-height: 1.6; color: var(--text-secondary);">One missed call could be worth a month's work. Or more. Tradie Radar answers live within 2 rings — as your business. No robotic voicemail. No awkward "call back later" moments. Just a real person, representing you, capturing the details before the caller rings the next tradesperson on Google.</p>
                 </article>
-                <article style="background: white; padding: 40px; border-radius: 16px; border: 1px solid #e5e7eb;">
+                <article class="two-problems-card" style="background: white; padding: 40px; border-radius: 16px; border: 1px solid #e5e7eb;">
                     <div style="font-size: 48px; margin-bottom: 24px;">🎯</div>
                     <h3 style="font-size: 24px; font-weight: 700; margin-bottom: 16px; color: var(--text-primary);">Only hear about what matters</h3>
                     <p style="font-size: 16px; line-height: 1.6; color: var(--text-secondary);">Not every call is worth your attention right now. Tradie Radar learns what a "golden goose" looks like for your business — multi-property landlords, facilities managers, commercial jobs, emergency callouts. Those get texted to you instantly. Everything else? Handled politely. Booked in. Followed up. But not interrupting you mid-job.</p>
@@ -2197,7 +2213,7 @@
         }, observerOptions);
 
         // Observe elements
-        document.querySelectorAll('.problem-card, .feature-card, .testimonial-card, .pullquote, .animated-underline, .hero-highlight').forEach(el => {
+        document.querySelectorAll('.problem-card, .feature-card, .testimonial-card, .pullquote, .animated-underline, .hero-highlight, .two-problems-card').forEach(el => {
             observer.observe(el);
         });
 
